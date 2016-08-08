@@ -30,7 +30,7 @@ public class FollowFriendsFollwers {
       do {
               ids = twitter.getFollowersIDs(cursor);
           for (long id : ids.getIDs()) {
-           //   System.out.println(id);
+              System.out.println(id);
               User user = twitter.showUser(id);
             //  System.out.println(user.getName());
               if(!user.isFollowRequestSent()){
@@ -41,8 +41,8 @@ public class FollowFriendsFollwers {
                      
                       User useri = twitter.showUser(ides);
                       System.out.println(useri.getName());
-                      if(!useri.isFollowRequestSent()){
-                      twitter.createFriendship(ides); }
+                    //  if(!useri.isFollowRequestSent()){
+                     // twitter.createFriendship(ides); }
             	
               
               }

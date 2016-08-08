@@ -22,7 +22,7 @@ public class LikeTweets {
 		//Add tweets to favourites
 	Twitter twitter = TwitterFactory.getSingleton();
 	
-    Query query = new Query("\"Donald Trump \"");
+    Query query = new Query("\"ashwin 7 wickets \"");
 
     //get the results from that search
     QueryResult result = twitter.search(query);

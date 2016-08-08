@@ -29,11 +29,14 @@ public class followfollowers {
                   ids = twitter.getFollowersIDs(cursor);
               for (long id : ids.getIDs()) {
                   System.out.println(id);
+                  try{
                   User user = twitter.showUser(id);
                   System.out.println(user.getName());
-                  if(!user.isFollowRequestSent()){
-                  twitter.createFriendship(id); }
-              }
+                 
+                 if(!user.isFollowRequestSent()){
+                 twitter.createFriendship(id); }
+              }  catch(TwitterException te){}}
+            
           } while ((cursor = ids.getNextCursor()) != 0);
 
     }
